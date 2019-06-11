@@ -9,7 +9,7 @@ A PowerShell Module to Control the Home-Assistant home automation software
 
 Load module to import all functions:
 ```powershell
-Import-Module .\HomeAssistant
+Import-Module .\Home-Assistant
 ```
 New-HomeAssistantSession neds to be used before any other function will work.
 
@@ -36,3 +36,5 @@ Invoke-HomeAssistantService -service light.turn_on -json '{"entity_id":"light.li
 **Changelog**  
 * 17.03.2019
     * Release
+* 11.06.2019
+    * Updated to better follow PowerShell's best practice for modules. Created folder /Home-Assistant/ and Merged all .ps1 functions to one module file "Home-Assistant.psm1" and Added Module Manifest file "Home-Assistant.psd1"
