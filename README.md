@@ -38,3 +38,5 @@ Invoke-HomeAssistantService -service light.turn_on -json '{"entity_id":"light.li
     * Release
 * 11.06.2019
     * Updated to better follow PowerShell's best practice for modules. Created folder /Home-Assistant/ and Merged all .ps1 functions to one module file "Home-Assistant.psm1" and Added Module Manifest file "Home-Assistant.psd1"
+* 05.11.2019   
+    * Added ModuleVersion to module manifest because it is required
