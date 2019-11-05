@@ -11,6 +11,9 @@
 # Script module or binary module file associated with this manifest.
 RootModule = 'Home-Assistant.psm1'
 
+# ModuleVersion ignore this, but this is required
+ModuleVersion = '0.0.0'
+
 # ID used to uniquely identify this module
 GUID = '9bfaf5c0-e44e-4715-b7f3-1cbc68713f6e'
 
