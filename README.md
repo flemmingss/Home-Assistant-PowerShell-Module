@@ -33,6 +33,29 @@ Get-HomeAssistantEntity -entity_id light.limitlessled_g1
 Invoke-HomeAssistantService -service light.turn_on -entity_id light.limitlessled_g1
 Invoke-HomeAssistantService -service light.turn_on -json '{"entity_id":"light.limitlessled_g1","color_name":"blue"}'
 ```
+
+**Examples - Advanced/Script/JSON**
+
+Use with custom component "hass-variables" https://github.com/rogro82/hass-variables
+
+```powershell
+
+$cpu_usage_pct = "25"
+$json_to_send = '{"variable":"computer_cpu_usage","value":' + '"' +  "$cpu_usage_pct" + '"' + '}'
+Invoke-HomeAssistantService -service variable.set_variable -json $json_to_send
+
+```
+
+Use with custom component "home-assistant-variables" https://github.com/snarky-snark/home-assistant-variables
+
+```powershell
+
+$cpu_usage_pct = "25"
+$json_to_send = '{"entity_id":"var.computer_cpu_usage","value":' + '"' +  "$cpu_usage_pct" + '"' + '}'
+Invoke-HomeAssistantService -service var.set -json $json_to_send
+
+```
+
 **Changelog**  
 * 17.03.2019
     * Release
